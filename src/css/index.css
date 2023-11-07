@@ -90,7 +90,7 @@ section#banner {
     justify-content: center;
 }
 
-hr {
+section#banner hr {
     width: 50%;
     height: 1px;
     margin-bottom: 1rem;
@@ -140,6 +140,7 @@ main {
 
 
 /* VYNILS */
+    /* general */
 section#vynils{
     background-color: aliceblue;
     margin: 12px;
@@ -147,17 +148,25 @@ section#vynils{
     padding: 1em;
 }
 
+    /* DIVS */
 div#popular {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
 
+}
+
+div.product {
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
 }
 
 
 img.vynil {
     object-fit: contain;
-    max-width: 30%;
+    max-width: 100%;
     transition: 0.2s;
 
 }
