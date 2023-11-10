@@ -1,9 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
 
+/* 
+    TODO
+    · Efecto en los vinilos que onHover muestre info del disco.
+    · Funcionalidad dropwdown
+    ·
+*/
+
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    text-decoration: none;
+    list-style-type: none;
 
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
@@ -27,12 +39,11 @@ h1, h1 span {
 header {
     position: fixed;
     height: 4em;
-    width: 100%;
+    width: 100vw;
     background-color: rgb(0, 0, 0);
     color: white;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
 }
     /* links */
@@ -55,11 +66,16 @@ header a:hover {
 header img#logoHeader {
     max-height: 3em;
     max-width: 50%;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
     /* Dropdown */
 header div.dropdown {
-
+    position: relative;
+    right: -40%;
 }
 
 header .dropdown:hover .dropdown-content {
@@ -101,7 +117,7 @@ section#banner {
 }
 
 section#banner hr {
-    width: 50%;
+    width: 80vw;
     height: 1px;
     margin-bottom: 1rem;
 }
@@ -202,10 +218,43 @@ aside {
 
 /* FOOTER */
 footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     padding-top: 3em;
     background-color: black;
     color: aliceblue;
 } 
+
+footer hr {
+    width: 90vw;
+}
+
+footer h3 {
+    margin-top: 0.5em;
+}
+
+    /* lista */
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+footer li a {
+    color: rgb(167, 167, 167);
+}
+
+footer p {
+    color: rgb(167, 167, 167);
+    font-size: small;
+    margin-bottom: 1em;
+}
 
 
 
@@ -224,11 +273,14 @@ footer {
     }
 
     header img#logoHeader {
-        margin-left: 4%;
+        position: static;
+        transform: translate(0);
+        margin-left: 5%;
     }
 
     header div.dropdown {
-        margin-right: 4%;
+        margin-right: 10%;
+        position: static;
     }
 
     main {
