@@ -24,7 +24,8 @@
 body {
     display: grid;
     grid-template-columns: auto; /* hasta 800px width*/
-    grid-template-rows: 90vh max-content max-content;
+    grid-template-rows: 90vh  max-content;
+    background-color: #000000;
 }
 
 h1, h1 span {
@@ -34,7 +35,7 @@ h1, h1 span {
 
 
 
-/* HEADER */
+/* HEADER ---------------------------------------------------------------------*/
     /* general */
 header {
     position: fixed;
@@ -102,7 +103,7 @@ header ul li:last-child {
 
 
 
-/* BANNER 1 */
+/* BANNER 1  ---------------------------------------------------------------------*/
     /* general */
 section#banner {
     background-image:linear-gradient(rgba(0, 0, 0, 0.5),
@@ -158,20 +159,23 @@ section#banner button:hover {
 
 
 main {
-    display: grid;
-    grid-template-rows: 60%;
     background-color: black;
     padding-top: 1em;
 }
 
+section h2, aside h2 {
+    margin-top: 0.2em;
+    margin-bottom: 1.5em;
+}
 
 
-/* VYNILS */
+
+/* VYNILS  -------------------------------------------------------------------*/
     /* general */
 section#vynils{
     background-color: aliceblue;
     margin: 12px;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 1em;
 }
 
@@ -181,10 +185,11 @@ section#vynils{
     }
 
     /* DIVS */
-div.productContainer {
+div.productContainer { /* GRID */
     display: grid;
     grid-template-columns: 50% 50%;
     margin-bottom: 50px;
+    row-gap: 3em;;
 }
 
 div.product {
@@ -202,11 +207,11 @@ img.vynil {
     height: 150px;
     max-width: 90%;
     transition: 0.2s;
+    margin-bottom: 0.5em;
 
 }
 
 img.vynil:hover {
-    transform: scale(1.2, 1.2);
     transition: 0.2s;
 }
 
@@ -214,22 +219,36 @@ img.vynil:hover {
         /* img */
             /* button */
 .product button  {
-    width: 100%;
+    width: 90%;
+    height: 2.5em;
+    border: 2px solid rgb(197, 182, 45, 0.3);
+    border-radius: px;
+    background-color: rgba(197, 182, 45, 0.158);
+    color: black;
+    font-family: "Agbalumo";
+    font-size: larger;
+}
+
+.product button:hover {
+    background-color: rgb(134, 122, 11);
+    border: none;
+    color: aliceblue;
+    transition: 0.2s;
 }
 
 
-/* ASIDE (NEWS) */
+/* ASIDE (NEWS) -----------------------------------------------------------*/
 aside {
     background-color: aliceblue;
     margin: 12px;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 1em;
 }
 
 
 
 
-/* FOOTER */
+/* FOOTER ------------------------------------------------------------------*/
 footer {
     display: flex;
     flex-direction: column;
@@ -245,8 +264,20 @@ footer hr {
     width: 90vw;
 }
 
-footer h3 {
+footer a:first-of-type {
+    margin-top: 2em;
+}
+
+footer a:last-of-type {
+    margin-bottom: 2em;
+}
+
+footer a {
     margin-top: 0.5em;
+}
+
+footer a:visited {
+    color: aliceblue;
 }
 
     /* lista */
@@ -255,9 +286,9 @@ footer ul {
     flex-direction: row;
     justify-content: space-around;
     width: 90%;
-    margin-top: 1em;
     margin-bottom: 2em;
 }
+
 
 footer li a {
     color: rgb(167, 167, 167);
@@ -273,10 +304,13 @@ footer p {
 
 
 
+
+
+
+
 /* ----------------------PARA MÁS DE 900PX (ASIDE)------------------- */
 @media screen and (min-width: 900px) {
     body {
-        grid-template-columns: 100%; /* hasta 800px width*/
         grid-template-rows: 90vh auto max-content;
     }
     
@@ -297,11 +331,12 @@ footer p {
     }
 
     main {
-        grid-template-columns: auto minmax(25%, 30%);
-        grid-template-rows: auto;
+        display: grid;
+        grid-template-columns: 60% auto;
     }
     
     section#banner {
+        grid-column: span 2;
     }
     
     section#vynils{
@@ -311,6 +346,7 @@ footer p {
     }
     
     footer {
+        grid-column: span 2;
     }   
 }
 
