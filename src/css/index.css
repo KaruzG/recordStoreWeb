@@ -12,7 +12,7 @@
 body {
     display: grid;
     grid-template-columns: auto; /* hasta 800px width*/
-    grid-template-rows: 850px 100% max-content;
+    grid-template-rows: 90vh 100% max-content;
 }
 
 h1, h1 span {
@@ -57,12 +57,11 @@ header img#logoHeader {
     max-width: 50%;
 }
 
-header img#logoHeader {
-    flex-grow: 1;
-    margin-left: 4%;
+    /* Dropdown */
+header div.dropdown {
+
 }
 
-    /* Dropdown */
 header .dropdown:hover .dropdown-content {
     display: block;
     background-color: #000000;
@@ -109,6 +108,7 @@ section#banner hr {
 
     /* H1 */
 section#banner h1 {
+    text-align: center;
     color: white;
     margin-bottom: 0.5rem;
     text-shadow: 1px 2px 5px rgba(0,0,0,0.57);
@@ -160,7 +160,7 @@ section#vynils{
 }
 
     /* DIVS */
-div#popular {
+div.productContainer {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -215,10 +215,20 @@ footer {
 @media screen and (min-width: 900px) {
     body {
         grid-template-columns: 100%; /* hasta 800px width*/
-        grid-template-rows: 850px auto max-content;
+        grid-template-rows: 90vh auto max-content;
     }
     
     header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header img#logoHeader {
+        margin-left: 4%;
+    }
+
+    header div.dropdown {
+        margin-right: 4%;
     }
 
     main {
