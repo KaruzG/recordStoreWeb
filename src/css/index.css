@@ -24,7 +24,7 @@
 body {
     display: grid;
     grid-template-columns: auto; /* hasta 800px width*/
-    grid-template-rows: 90vh 100% max-content;
+    grid-template-rows: 90vh max-content max-content;
 }
 
 h1, h1 span {
@@ -173,25 +173,34 @@ section#vynils{
     margin: 12px;
     border-radius: 10px;
     padding: 1em;
-    overflow: hidden;
 }
+
+    /* H2 */
+    section#vynils {
+        text-align: center;
+    }
 
     /* DIVS */
 div.productContainer {
     display: grid;
     grid-template-columns: 50% 50%;
+    margin-bottom: 50px;
 }
 
 div.product {
-    display: inline;
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
 }
 
-
+    /* divs */
+        /* img */
 img.vynil {
     object-fit: contain;
     height: 150px;
+    max-width: 90%;
     transition: 0.2s;
 
 }
@@ -201,6 +210,12 @@ img.vynil:hover {
     transition: 0.2s;
 }
 
+    /* divs */
+        /* img */
+            /* button */
+.product button  {
+    width: 100%;
+}
 
 
 /* ASIDE (NEWS) */
