@@ -23,6 +23,7 @@ h1, h1 span {
 
 
 /* HEADER */
+    /* general */
 header {
     position: fixed;
     height: 4em;
@@ -30,10 +31,11 @@ header {
     background-color: rgb(0, 0, 0);
     color: white;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
-
+    /* links */
 header a {
     text-decoration: none;
     color: aliceblue;
@@ -49,18 +51,27 @@ header a:hover {
     transition: 0.2s;
 }
 
-header ul {
-    display: flex;
-    align-items: center;
-}
-
-header ul li#logoHeader img {
+    /* LOGO */
+header img#logoHeader {
     max-height: 3em;
+    max-width: 50%;
 }
 
-header ul li#logoHeader {
+header img#logoHeader {
     flex-grow: 1;
     margin-left: 4%;
+}
+
+    /* Dropdown */
+header .dropdown:hover .dropdown-content {
+    display: block;
+    background-color: #000000;
+}
+
+    /* Items del dropdown */
+header ul {
+    display: none;
+    align-items: center;
 }
 
 header ul li {
@@ -226,4 +237,11 @@ footer {
     
     footer {
     }   
+}
+
+/* ----------------------PARA MÁS DE 1920PX (FIX PARA IMAGENES)------------------- */
+@media screen and (min-width: 900px) {
+    section#banner {
+        /* por hacer */
+    }
 }
