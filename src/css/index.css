@@ -180,15 +180,31 @@ section#vynils{
 }
 
     /* H2 */
-    section#vynils {
+    section#vynils h2 {
         text-align: center;
+        color: #000000;
+    font-style: italic;
+
+    }
+
+    /* H3 */
+    h3.findMore{
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: #000000;
+        text-decoration: underline;
+    }
+
+    h3.findMore:first-of-type {
+        margin-bottom: 40px;
     }
 
     /* DIVS */
 div.productContainer { /* GRID */
     display: grid;
     grid-template-columns: 50% 50%;
-    margin-bottom: 50px;
+    margin-bottom: px;
     row-gap: 3em;;
 }
 
@@ -198,6 +214,7 @@ div.product {
     align-items: center;
     justify-content: center;
     width: 100%;
+    cursor: pointer;
 }
 
     /* divs */
@@ -219,12 +236,11 @@ img.vynil:hover {
         /* img */
             /* button */
 .product button  {
-    width: 90%;
+    width: 99%;
     height: 2.5em;
-    border: 2px solid rgb(197, 182, 45, 0.3);
-    border-radius: px;
-    background-color: rgba(197, 182, 45, 0.158);
-    color: black;
+    border: none;
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
     font-family: "Agbalumo";
     font-size: larger;
 }
@@ -243,6 +259,21 @@ aside {
     margin: 12px;
     border-radius: 5px;
     padding: 1em;
+}
+
+aside h2 {
+    text-align: center;
+    font-style: italic;
+}
+
+aside div.new a {
+    color: #000000;
+    font-style: italic;
+}
+
+aside hr{
+    margin-bottom: 10px;
+    margin-top: 14px;
 }
 
 
@@ -332,11 +363,10 @@ footer p {
 
     main {
         display: grid;
-        grid-template-columns: 60% auto;
+        grid-template-columns: 70% auto;
     }
     
-    section#banner {
-        grid-column: span 2;
+    /* section#banner {
     }
     
     section#vynils{
@@ -346,13 +376,12 @@ footer p {
     }
     
     footer {
-        grid-column: span 2;
-    }   
+    }    */
 }
 
 /* ----------------------PARA MÁS DE 1920PX (FIX PARA IMAGENES)------------------- */
-@media screen and (min-width: 900px) {
+/* @media screen and (min-width: 900px) {
     section#banner {
-        /* por hacer */
+         por hacer 
     }
-}
+} */
