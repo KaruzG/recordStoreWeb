@@ -4,7 +4,7 @@
     TODO
     · Efecto en los vinilos que onHover muestre info del disco.
     · Funcionalidad dropwdown
-    ·
+    · footer desktop
 */
 
 
@@ -173,27 +173,25 @@ section#vynils{
     margin: 12px;
     border-radius: 10px;
     padding: 1em;
+    overflow: hidden;
 }
 
     /* DIVS */
 div.productContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
 div.product {
-    display: flex;
+    display: inline;
     flex-direction: column;
-    max-width: 30%;
+    width: 100%;
 }
 
 
 img.vynil {
     object-fit: contain;
-    max-width: 100%;
+    height: 150px;
     transition: 0.2s;
 
 }
