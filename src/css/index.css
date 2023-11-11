@@ -164,6 +164,8 @@ main {
 }
 
 section h2, aside h2 {
+    font-family: "Agbalumo";
+    text-decoration: underline;
     margin-top: 0.2em;
     margin-bottom: 1.5em;
 }
@@ -180,31 +182,33 @@ section#vynils{
 }
 
     /* H2 */
-    section#vynils h2 {
-        text-align: center;
-        color: #000000;
+section#vynils h2 {
+    text-align: center;
+    color: #000000;
     font-style: italic;
+}
 
-    }
+section#vynils hr {
+    margin-bottom: 2em;
+}
 
     /* H3 */
-    h3.findMore{
-        text-align: center;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        color: #000000;
-        text-decoration: underline;
-    }
+h3.findMore{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #000000;
+    text-decoration: underline;
+}
 
-    h3.findMore:first-of-type {
-        margin-bottom: 40px;
-    }
+h3.findMore:first-of-type {
+    margin-bottom: 40px;
+}
 
     /* DIVS */
 div.productContainer { /* GRID */
     display: grid;
     grid-template-columns: 50% 50%;
-    margin-bottom: px;
     row-gap: 3em;;
 }
 
@@ -259,7 +263,18 @@ aside {
     margin: 12px;
     border-radius: 5px;
     padding: 1em;
+
+    max-height: 100vw;
+    max-width: 94vw;
+    overflow: scroll;
+    overflow-x: hidden;
+
 }
+
+    /* SCROLL BAR */
+    aside::-webkit-scrollbar-thumb {
+        background-color: #000000;
+    }
 
 aside h2 {
     text-align: center;
@@ -269,6 +284,17 @@ aside h2 {
 aside div.new a {
     color: #000000;
     font-style: italic;
+}
+
+aside div.new p {
+    text-align: justify;
+    text-justify: inter-word;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+    max-width: 100%;
+    max-height: 3.2em;
 }
 
 aside hr{
@@ -341,10 +367,13 @@ footer p {
 
 /* ----------------------PARA MÁS DE 900PX (ASIDE)------------------- */
 @media screen and (min-width: 900px) {
+
+    /* GENERAL */
     body {
         grid-template-rows: 90vh auto max-content;
     }
     
+    /* HEADER */
     header {
         display: flex;
         justify-content: space-between;
@@ -361,26 +390,36 @@ footer p {
         position: static;
     }
 
+    /* BANNER1 */
+    /* - */
+
+    /* MAIN */
     main {
         display: grid;
         grid-template-columns: 70% auto;
     }
-    
-    /* section#banner {
+
+        /* vinyls  */
+    section#vynils div.productContainer{
+        grid-template-columns: 25% 25% 25% 25%;
     }
-    
-    section#vynils{
-    }
-    
+
+        /* ASIDE */
     aside {
+        max-height: 768.8px;
     }
     
-    footer {
-    }    */
 }
 
+/* ----------------------PARA TABLET (productCOntainer)------------------- */
+/* @media screen and (min-width: 1920px) {
+    section#banner {
+         por hacer 
+    }
+} */
+
 /* ----------------------PARA MÁS DE 1920PX (FIX PARA IMAGENES)------------------- */
-/* @media screen and (min-width: 900px) {
+/* @media screen and (min-width: 1920px) {
     section#banner {
          por hacer 
     }
