@@ -172,9 +172,9 @@ section h2, aside h2 {
 
 
 
-/* VYNILS  -------------------------------------------------------------------*/
+/* VINYLS  -------------------------------------------------------------------*/
     /* general */
-section#vynils{
+section#vinyls{
     background-color: aliceblue;
     margin: 12px;
     border-radius: 5px;
@@ -182,13 +182,13 @@ section#vynils{
 }
 
     /* H2 */
-section#vynils h2 {
+section#vinyls h2 {
     text-align: center;
     color: #000000;
     font-style: italic;
 }
 
-section#vynils hr {
+section#vinyls hr {
     margin-bottom: 2em;
 }
 
@@ -205,7 +205,7 @@ h3.findMore:first-of-type {
     margin-bottom: 40px;
 }
 
-    /* DIVS */
+    /* PRODUCTS (DIV) */
 div.productContainer { /* GRID */
     display: grid;
     grid-template-columns: 50% 50%;
@@ -223,7 +223,7 @@ div.product {
 
     /* divs */
         /* img */
-img.vynil {
+img.vinyl {
     object-fit: contain;
     height: 150px;
     max-width: 90%;
@@ -232,9 +232,51 @@ img.vynil {
 
 }
 
-img.vynil:hover {
+img.vinyl:hover {
     transition: 0.2s;
 }
+
+    /* div.product */
+        /* div.productText */
+.productText {
+    display: grid;
+    grid-template-columns: fit-content auto;
+    grid-template-rows: auto 1.2em;
+    margin-bottom: 15px;
+
+    width: 100%;
+}
+
+.productText h3 {
+    grid-column: span 2;
+    justify-self: center;
+    align-self: center;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    height: 2.2em;
+    max-width: max-content;
+    margin-bottom: 15px;
+
+}
+
+.productText h4.productStock {
+    color: rgb(116, 116, 116);
+    font-style: italic;
+    margin-left: 10px;
+    white-space: nowrap;
+    margin-top: auto;
+}
+
+.productText h4.productPrice {
+    color: rgb(214, 195, 18);
+    font-size:x-large;
+    justify-self: end;
+    margin-right: 10px;
+    text-decoration: underline;
+    
+}
+
 
     /* divs */
         /* img */
@@ -247,10 +289,12 @@ img.vynil:hover {
     color: aliceblue;
     font-family: "Agbalumo";
     font-size: larger;
+    transition: 0.8s;
+    cursor: pointer;
 }
 
 .product button:hover {
-    background-color: rgb(134, 122, 11);
+    background-color: rgb(201, 182, 19);
     border: none;
     color: aliceblue;
     transition: 0.2s;
@@ -404,28 +448,22 @@ footer p {
     }
 
         /* vinyls  */
-    section#vynils div.productContainer{
+    section#vinyls div.productContainer{
         grid-template-columns: 25% 25% 25% 25%;
     }
 
         /* ASIDE */
     aside div.newsContainer {
-        max-height: 650px;
+        max-height: 830px;
         overflow-x: hidden;
     }
     
 }
 
-/* ----------------------PARA TABLET (productCOntainer)------------------- */
-/* @media screen and (min-width: 1920px) {
-    section#banner {
-         por hacer 
+/* ----------------------PARA MÁS DE 1500PX (FIX)------------------- */
+@media screen and (min-width: 1500px) {
+    main {
+        margin-left: 5vw;
+        margin-right: 5vw;
     }
-} */
-
-/* ----------------------PARA MÁS DE 1920PX (FIX PARA IMAGENES)------------------- */
-/* @media screen and (min-width: 1920px) {
-    section#banner {
-         por hacer 
-    }
-} */
+}
