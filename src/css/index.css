@@ -264,11 +264,15 @@ aside {
     border-radius: 5px;
     padding: 1em;
 
-    max-height: 100vw;
     max-width: 94vw;
-    overflow: scroll;
     overflow-x: hidden;
 
+}
+
+aside div.newsContainer {
+    max-height: 100vw;
+    overflow: scroll;
+    margin-right: 0%;
 }
 
     /* SCROLL BAR */
@@ -405,8 +409,9 @@ footer p {
     }
 
         /* ASIDE */
-    aside {
-        max-height: 768.8px;
+    aside div.newsContainer {
+        max-height: 650px;
+        overflow-x: hidden;
     }
     
 }
