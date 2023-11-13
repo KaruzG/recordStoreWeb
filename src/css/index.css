@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&display=swap");
 
 /* 
     TODO
@@ -7,33 +7,32 @@
 */
 
 * {
-    margin: 0; 
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 
     text-decoration: none;
     list-style-type: none;
 
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 /* -------------------- GENERAL -------------------- */
 body {
     display: grid;
     grid-template-columns: auto; /* hasta 800px width*/
-    grid-template-rows: 90vh  max-content;
+    grid-template-rows: 90vh max-content;
     background-color: #000000;
 }
 
-h1, h1 span {
+h1,
+h1 span {
     font-family: "Agbalumo";
     font-size: 45px;
 }
 
-
-
 /* HEADER ---------------------------------------------------------------------*/
-    /* general */
+/* general */
 header {
     position: fixed;
     height: 4em;
@@ -44,7 +43,7 @@ header {
     flex-direction: row;
     align-items: center;
 }
-    /* links */
+/* links */
 header a {
     text-decoration: none;
     color: aliceblue;
@@ -60,7 +59,7 @@ header a:hover {
     transition: 0.2s;
 }
 
-    /* LOGO */
+/* LOGO */
 header img#logoHeader {
     max-height: 3em;
     max-width: 50%;
@@ -70,7 +69,7 @@ header img#logoHeader {
     transform: translateX(-50%);
 }
 
-    /* Dropdown */
+/* Dropdown */
 header div.dropdown {
     position: relative;
     right: -40%;
@@ -81,7 +80,7 @@ header .dropdown:hover .dropdown-content {
     background-color: #000000;
 }
 
-    /* Items del dropdown */
+/* Items del dropdown */
 header ul {
     display: none;
     align-items: center;
@@ -97,17 +96,13 @@ header ul li:last-child {
     margin-right: 10%;
 }
 
-
-
-
 /* BANNER 1  ---------------------------------------------------------------------*/
-    /* general */
+/* general */
 section#banner {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.5),
-                   rgba(0, 0, 0, 0.5)), 
-                     url("../img/banner1.webp");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../img/banner1.webp");
     box-shadow: inset 0px -83px 40px -36px #000000;
-                     
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,19 +115,19 @@ section#banner hr {
     margin-bottom: 1rem;
 }
 
-    /* H1 */
+/* H1 */
 section#banner h1 {
     text-align: center;
     color: white;
     margin-bottom: 0.5rem;
-    text-shadow: 1px 2px 5px rgba(0,0,0,0.57);
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.57);
 }
 
 section#banner span {
     color: var(--yellow);
 }
 
-    /* button */
+/* button */
 section#banner button {
     font-family: "Agbalumo";
 
@@ -154,31 +149,29 @@ section#banner button:hover {
     transition: 0.2s;
 }
 
-
 main {
     background-color: black;
     padding-top: 1em;
 }
 
-section h2, aside h2 {
+section h2,
+aside h2 {
     font-family: "Agbalumo";
     text-decoration: underline;
     margin-top: 0.2em;
     margin-bottom: 1.5em;
 }
 
-
-
 /* VINYLS  -------------------------------------------------------------------*/
-    /* general */
-section#vinyls{
+/* general */
+section#vinyls {
     background-color: aliceblue;
     margin: 12px;
     border-radius: 5px;
     padding: 1em;
 }
 
-    /* H2 */
+/* H2 */
 section#vinyls h2 {
     text-align: center;
     color: #000000;
@@ -189,8 +182,8 @@ section#vinyls hr {
     margin-bottom: 2em;
 }
 
-    /* H3 */
-h3.findMore{
+/* H3 */
+h3.findMore {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -202,11 +195,12 @@ h3.findMore:first-of-type {
     margin-bottom: 40px;
 }
 
-    /* PRODUCTS (DIV) */
-div.productContainer { /* GRID */
+/* PRODUCTS (DIV) */
+div.productContainer {
+    /* GRID */
     display: grid;
     grid-template-columns: 50% 50%;
-    row-gap: 3em;;
+    row-gap: 3em;
 }
 
 div.product {
@@ -218,23 +212,22 @@ div.product {
     cursor: pointer;
 }
 
-    /* divs */
-        /* img */
+/* divs */
+/* img */
 img.vinyl {
     object-fit: contain;
     height: 150px;
     max-width: 90%;
     transition: 0.2s;
     margin-bottom: 0.5em;
-
 }
 
 img.vinyl:hover {
     transition: 0.2s;
 }
 
-    /* div.product */
-        /* div.productText */
+/* div.product */
+/* div.productText */
 .productText {
     display: grid;
     grid-template-columns: fit-content auto;
@@ -254,7 +247,6 @@ img.vinyl:hover {
     height: 2.2em;
     max-width: max-content;
     margin-bottom: 15px;
-
 }
 
 .productText h4.productStock {
@@ -267,18 +259,16 @@ img.vinyl:hover {
 
 .productText h4.productPrice {
     color: var(--yellow);
-    font-size:x-large;
+    font-size: x-large;
     justify-self: end;
     margin-right: 10px;
     text-decoration: underline;
-    
 }
 
-
-    /* divs */
-        /* img */
-            /* button */
-.product button  {
+/* divs */
+/* img */
+/* button */
+.product button {
     width: 99%;
     height: 2.5em;
     border: none;
@@ -297,7 +287,6 @@ img.vinyl:hover {
     transition: 0.2s;
 }
 
-
 /* ASIDE (NEWS) -----------------------------------------------------------*/
 aside {
     background-color: var(--white);
@@ -307,7 +296,6 @@ aside {
 
     max-width: 94vw;
     overflow-x: hidden;
-
 }
 
 aside div.newsContainer {
@@ -316,10 +304,10 @@ aside div.newsContainer {
     margin-right: 0%;
 }
 
-    /* SCROLL BAR */
-    aside::-webkit-scrollbar-thumb {
-        background-color: #000000;
-    }
+/* SCROLL BAR */
+aside::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
 
 aside h2 {
     text-align: center;
@@ -342,13 +330,10 @@ aside div.new p {
     max-height: 3.2em;
 }
 
-aside hr{
+aside hr {
     margin-bottom: 10px;
     margin-top: 14px;
 }
-
-
-
 
 /* FOOTER ------------------------------------------------------------------*/
 footer {
@@ -360,7 +345,7 @@ footer {
     padding-top: 3em;
     background-color: black;
     color: var(--white);
-} 
+}
 
 footer hr {
     width: 90vw;
@@ -382,7 +367,7 @@ footer a:visited {
     color: var(--white);
 }
 
-    /* lista */
+/* lista */
 footer ul {
     display: flex;
     flex-direction: row;
@@ -390,7 +375,6 @@ footer ul {
     width: 90%;
     margin-bottom: 2em;
 }
-
 
 footer li a {
     color: var(--gray);
