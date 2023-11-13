@@ -4,13 +4,10 @@
     TODO
     · Efecto en los vinilos que onHover muestre info del disco.
     · Funcionalidad dropwdown
-    · footer desktop
 */
 
-
-
 * {
-    margin: 0;
+    margin: 0; 
     padding: 0;
     box-sizing: border-box;
 
@@ -42,7 +39,7 @@ header {
     height: 4em;
     width: 100vw;
     background-color: rgb(0, 0, 0);
-    color: white;
+    color: var(--white);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -58,7 +55,7 @@ header a {
 }
 
 header a:hover {
-    color: rgb(214, 195, 18);
+    color: var(--yellowHover);
     font-size: x-large;
     transition: 0.2s;
 }
@@ -132,15 +129,15 @@ section#banner h1 {
 }
 
 section#banner span {
-    color: rgb(214, 195, 18);
+    color: var(--yellow);
 }
 
     /* button */
 section#banner button {
     font-family: "Agbalumo";
 
-    background-color: rgb(214, 195, 18);
-    color: rgb(255, 255, 255);
+    background-color: var(--yellow);
+    color: var(--white);
     padding: 5px 80px 13px 80px; /* El padding bottom diferente porque la fuente está descentrada... */
     border: none;
     border-radius: 5px;
@@ -152,7 +149,7 @@ section#banner button {
 }
 
 section#banner button:hover {
-    background-color: rgb(192, 175, 17);
+    background-color: var(--yellowDarker);
     transform: scale(1.05, 1.05);
     transition: 0.2s;
 }
@@ -261,7 +258,7 @@ img.vinyl:hover {
 }
 
 .productText h4.productStock {
-    color: rgb(116, 116, 116);
+    color: var(--gray);
     font-style: italic;
     margin-left: 10px;
     white-space: nowrap;
@@ -269,7 +266,7 @@ img.vinyl:hover {
 }
 
 .productText h4.productPrice {
-    color: rgb(214, 195, 18);
+    color: var(--yellow);
     font-size:x-large;
     justify-self: end;
     margin-right: 10px;
@@ -286,7 +283,7 @@ img.vinyl:hover {
     height: 2.5em;
     border: none;
     background-color: rgb(0, 0, 0);
-    color: aliceblue;
+    color: var(--white);
     font-family: "Agbalumo";
     font-size: larger;
     transition: 0.8s;
@@ -294,16 +291,16 @@ img.vinyl:hover {
 }
 
 .product button:hover {
-    background-color: rgb(201, 182, 19);
+    background-color: var(--yellow);
     border: none;
-    color: aliceblue;
+    color: var(--white);
     transition: 0.2s;
 }
 
 
 /* ASIDE (NEWS) -----------------------------------------------------------*/
 aside {
-    background-color: aliceblue;
+    background-color: var(--white);
     margin: 12px;
     border-radius: 5px;
     padding: 1em;
@@ -362,7 +359,7 @@ footer {
 
     padding-top: 3em;
     background-color: black;
-    color: aliceblue;
+    color: var(--white);
 } 
 
 footer hr {
@@ -382,7 +379,7 @@ footer a {
 }
 
 footer a:visited {
-    color: aliceblue;
+    color: var(--white);
 }
 
     /* lista */
@@ -396,74 +393,11 @@ footer ul {
 
 
 footer li a {
-    color: rgb(167, 167, 167);
+    color: var(--gray);
 }
 
 footer p {
-    color: rgb(167, 167, 167);
+    color: var(--gray);
     font-size: small;
     margin-bottom: 1em;
-}
-
-
-
-
-
-
-
-
-
-/* ----------------------PARA MÁS DE 900PX (ASIDE)------------------- */
-@media screen and (min-width: 900px) {
-
-    /* GENERAL */
-    body {
-        grid-template-rows: 90vh auto max-content;
-    }
-    
-    /* HEADER */
-    header {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    header img#logoHeader {
-        position: static;
-        transform: translate(0);
-        margin-left: 5%;
-    }
-
-    header div.dropdown {
-        margin-right: 10%;
-        position: static;
-    }
-
-    /* BANNER1 */
-    /* - */
-
-    /* MAIN */
-    main {
-        display: grid;
-        grid-template-columns: 70% auto;
-    }
-
-        /* vinyls  */
-    section#vinyls div.productContainer{
-        grid-template-columns: 25% 25% 25% 25%;
-    }
-
-        /* ASIDE */
-    aside div.newsContainer {
-        max-height: 830px;
-        overflow-x: hidden;
-    }
-    
-}
-
-/* ----------------------PARA MÁS DE 1500PX (FIX)------------------- */
-@media screen and (min-width: 1500px) {
-    main {
-        margin-left: 5vw;
-        margin-right: 5vw;
-    }
 }

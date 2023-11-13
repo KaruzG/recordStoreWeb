@@ -1,0 +1,56 @@
+/* ----------------------PARA MÁS DE 900PX (ASIDE)------------------- */
+@media screen and (min-width: 900px) {
+
+    /* GENERAL */
+    body {
+        grid-template-rows: 90vh auto max-content;
+    }
+    
+    /* HEADER */
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header img#logoHeader {
+        position: static;
+        transform: translate(0);
+        margin-left: 5%;
+    }
+
+    header div.dropdown {
+        margin-right: 10%;
+        position: static;
+    }
+
+    /* MAIN */
+    main {
+        display: grid;
+        grid-template-columns: 70% auto;
+    }
+
+        /* vinyls  */
+    section#vinyls div.productContainer{
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+
+        /* ASIDE */
+    aside div.newsContainer {
+        max-height: 830px;
+        overflow-x: hidden;
+    }
+
+        /* FOOTER */
+    footer ul{
+        padding: 0 30vw;
+    }
+    
+}
+
+/* ----------------------PARA MÁS DE 1500PX (FIX)------------------- */
+@media screen and (min-width: 1500px) {
+    main {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+}
