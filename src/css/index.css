@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Agbalumo&display=swap");
 
-/* 
-    TODO
-    · Efecto en los vinilos que onHover muestre info del disco.
-    · Funcionalidad dropwdown
-*/
 
 * {
     margin: 0;
@@ -69,7 +64,11 @@ header img#logoHeader {
 }
 
 /* Dropdown */
-.menu {
+nav#navDesktop {
+    display: none;
+}
+
+nav#navMobile {
     position: relative;
     right: -35%;
     padding:0;
@@ -79,19 +78,19 @@ header img#logoHeader {
 }
 
 /* style for the button */
-.menu:before {
+nav#navMobile:before {
     content: "\2630"; 
     color:white;
     padding: 10px;
     border-radius:3px;
 }
 
-.menu:focus { 
+nav#navMobile:focus { 
     cursor: pointer; 
 }
 
 /* If :focus detected the dropdown menu is displayed by making it visible */
-.menu:focus .menu-dropdown {
+nav#navMobile:focus .menu-dropdown {
     opacity:1; visibility:visible;
 }
 
@@ -117,36 +116,10 @@ header img#logoHeader {
     padding:5px;
 }
 
-/* header div.dropdown {
-    z-index: 3;
-    position: relative;
-    right: -40%;
+.menu-dropdown a:hover {
+    color: var(--yellow);
+    transition: 0.2s;
 }
-
-header span {
-    cursor: pointer;
-}
-
-header .dropdown:focus .dropdown-content {
-    display: flex;
-    background-color: #000000;
-} */
-
-/* Items del dropdown */
-/* header ul {
-    display: none;
-    align-items: center;
-}
-
-header ul li {
-    margin-right: 5%;
-
-    list-style: none;
-}
-
-header ul li:last-child {
-    margin-right: 10%;
-} */
 
 /* BANNER 1  ---------------------------------------------------------------------*/
 /* general */
@@ -208,6 +181,9 @@ main {
     column-gap: 1em;
     row-gap: 2em;
     grid-template-rows: auto;
+
+    max-width: 90vw;
+    justify-self: center;
 }
 
 section h2,
