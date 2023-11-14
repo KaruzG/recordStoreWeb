@@ -25,7 +25,6 @@
 
     /* MAIN */
     main {
-        display: grid;
         grid-template-columns: 70% auto;
     }
 
