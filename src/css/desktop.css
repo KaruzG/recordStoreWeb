@@ -13,19 +13,37 @@
     }
 
     header img#logoHeader {
+        /* descentrar */
         position: static;
         transform: translate(0);
+
         margin-left: 5%;
     }
 
-    header div.dropdown {
-        margin-right: 10%;
-        position: static;
+    /* HEADER */
+        /* NAV (Dropdown in mobile)*/
+    nav#navMobile {
+        display: none;
     }
+
+    /* HEADER */
+        /* NAV */
+    nav#navDesktop{
+        display: block;
+        justify-self: self-end;
+        margin-right: 10%;
+    }
+
+    nav#navDesktop ul a:hover {
+        color: var(--yellow);
+        transition: 0.2s;
+    }
+
 
     /* MAIN */
     main {
         grid-template-columns: 70% auto;
+        max-width: 98vw;
     }
 
         /* vinyls  */
