@@ -46,7 +46,7 @@ header {
 /* links */
 header a {
     text-decoration: none;
-    color: aliceblue;
+    color: var(--white);
     font-weight: bold;
     padding: 10px;
     transition: 0.2s;
@@ -55,7 +55,6 @@ header a {
 
 header a:hover {
     color: var(--yellowHover);
-    font-size: x-large;
     transition: 0.2s;
 }
 
@@ -70,18 +69,71 @@ header img#logoHeader {
 }
 
 /* Dropdown */
-header div.dropdown {
+.menu {
+    position: relative;
+    right: -35%;
+    padding:0;
+    margin:0;
+    outline:0;
+    text-align:left;
+}
+
+/* style for the button */
+.menu:before {
+    content: "\2630"; 
+    color:white;
+    padding: 10px;
+    border-radius:3px;
+}
+
+.menu:focus { 
+    cursor: pointer; 
+}
+
+/* If :focus detected the dropdown menu is displayed by making it visible */
+.menu:focus .menu-dropdown {
+    opacity:1; visibility:visible;
+}
+
+/* style for the dropdown box */
+.menu-dropdown {
+    padding: 10px;
+    border-radius:3px;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    background: #000000;
+    top: 45px;
+    left: -100px;
+}
+
+/* style the links in the dropdown */
+.menu-dropdown a {
+    outline:0;
+    display:block;
+    color:white;
+    width:160px;
+    padding:5px;
+}
+
+/* header div.dropdown {
+    z-index: 3;
     position: relative;
     right: -40%;
 }
 
-header .dropdown:hover .dropdown-content {
-    display: block;
-    background-color: #000000;
+header span {
+    cursor: pointer;
 }
 
+header .dropdown:focus .dropdown-content {
+    display: flex;
+    background-color: #000000;
+} */
+
 /* Items del dropdown */
-header ul {
+/* header ul {
     display: none;
     align-items: center;
 }
@@ -94,7 +146,7 @@ header ul li {
 
 header ul li:last-child {
     margin-right: 10%;
-}
+} */
 
 /* BANNER 1  ---------------------------------------------------------------------*/
 /* general */
@@ -154,6 +206,7 @@ main {
     background-color: black;
     padding-top: 1em;
     column-gap: 1em;
+    row-gap: 2em;
     grid-template-rows: auto;
 }
 
