@@ -1,0 +1,43 @@
+@keyframes loading {
+    from {
+        background-color: black;
+    }
+
+    to {
+        background-color: transparent;
+        display: none;
+    }
+}
+
+#loadingAnimation {
+    position: absolute;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+
+    animation-delay: 4s;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-name: loading;
+    animation-fill-mode: forwards;
+}
+
+@keyframes noScroll {
+    from {
+        overflow: none;
+    }
+
+    to {
+        overflow: scroll;
+    }
+    
+}
+
+body {
+    overflow: hidden;
+
+    animation-duration: 8s;
+    animation-name: noScroll;
+    animation-fill-mode: forwards;
+}
