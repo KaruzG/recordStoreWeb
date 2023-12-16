@@ -1,3 +1,4 @@
+/* Animación fade in */
 @keyframes loading {
     from {
         background-color: black;
@@ -23,4 +24,16 @@
     animation-timing-function: ease-in-out;
     animation-name: loading;
     animation-fill-mode: forwards;
+}
+
+/* Animación circulo */
+#loadingCircle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    z-index: 100;
+    border-radius: 100%;
+    border: 10px dotted white;
+
+    animation-name: rotation;
 }
