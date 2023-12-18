@@ -29,11 +29,11 @@
 /* Animación circulo */
 @keyframes rotation {
     from {
-        transform: rotate(0deg);
+        transform: translate(-50%, -50%) rotate(0deg);
     }
 
     to {
-        transform: rotate(360deg);
+        transform:translate(-50%, -50%) rotate(360deg);
         border: 10px dotted transparent;
     }
 }
@@ -44,6 +44,7 @@
     z-index: 100;
     border-radius: 100%;
     border: 10px dotted white;
+    transform-origin: center center;
 
     top: 50%;
     left: 50%;
